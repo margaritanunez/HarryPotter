@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class HPRetrofitClient {
 
     companion object{
-        private const val URL_BASE = "https://my-json-server.typicode.com/Himuravidal/FakeAPIdata/"
+        private const val URL_BASE = "https://hp-api.onrender.com/api/"
 
         fun getRetrofitPhone() : HarryPotterApi{
             val mRetrofit = Retrofit.Builder().baseUrl(URL_BASE)
