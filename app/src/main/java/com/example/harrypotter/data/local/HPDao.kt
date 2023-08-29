@@ -16,10 +16,10 @@ interface HPDao {
     fun getListCharacters(): LiveData<List<HPEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertDetailCharacters (hpEntity: HPEntity)
+    suspend fun insertDetailCharacters (detailCharacterEntity: DetailCharacterEntity)
 
-    @Query("select * from characters_table where id= :id")
-    fun getDetailCharacter(id: String): LiveData<HPEntity>
+    @Query("select * from detail_character_table where id= :id")
+    fun getDetailCharacter(id: String): LiveData<DetailCharacterEntity>
 
 
 }
